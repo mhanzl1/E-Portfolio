@@ -343,7 +343,7 @@ body {
     .main__content p {
         font-size: 1.5rem;
     }  
-    .about-section {
+    #about-me {
     margin-top: -140px; /* Reduce top margin */
     
 }
