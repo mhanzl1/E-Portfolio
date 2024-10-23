@@ -89,7 +89,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     min-height: 100vh;
-    background-image: url('/E-Portfolio/background2.jpg');
+    background-image: url('background2.jpg');
     background-size: cover;
     padding: 50px;
    
