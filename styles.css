@@ -160,7 +160,7 @@ body {
 
 /* Adding margin to the About Me section */
 #about-me {
-    padding-top: 50px; /* Existing padding */
+    padding-top: 10px; /* Existing padding */
     margin-top: 50px; /* Adds space above the section */
     padding-bottom: 50px;
 }
@@ -186,7 +186,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 55vh;
+    height: 43vh;
 }
 
 .services__container {
