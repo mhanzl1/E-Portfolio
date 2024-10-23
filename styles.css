@@ -343,6 +343,13 @@ body {
     .main__content p {
         font-size: 1.5rem;
     }  
+    #about-me {
+    margin-top: 20px; /* Reduce top margin */
+    padding-top: 0; /* Remove top padding */
+}
+.services {
+    margin-bottom: 0; /* Reduce bottom margin */
+}
 }
 
 
