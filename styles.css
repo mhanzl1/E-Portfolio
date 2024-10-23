@@ -313,6 +313,16 @@ body {
     }
 }
 
+@media screen and (max-width: 375px) {
+    .services__container {
+        margin-bottom: 50px; /* Ensure minimal spacing */
+    }
+
+    .main__container {
+        padding: 20px; /* Add padding if needed */
+    }
+}
+
 @media screen and (max-width: 768px) {
     .main__container {
         grid-template-columns: 1fr;
@@ -342,11 +352,6 @@ body {
     }
     .main__content p {
         font-size: 1.5rem;
-    }  
-    #about-me {
-    margin-top: -140px; /* Reduce top margin */
-    
-}
 
 }
 
