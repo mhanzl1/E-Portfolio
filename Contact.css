@@ -349,7 +349,38 @@ h2 {
         padding: 0 20px; /* Adjust padding for mobile */
     }
 
-    .main__content {
-        text-align:
+    .main__content h1 {
+        font-size: 2.5rem; /* Adjusted font size for mobile */
+    }
+
+    .main__content h2 {
+        font-size: 1.5rem; /* Adjusted font size for mobile */
+    }
+
+    .main__content p {
+        font-size: 1rem; /* Adjusted font size for mobile */
+    }
+
+    h2 {
+        font-size: 30px; /* Adjusted for mobile */
+        margin-bottom: 40px; /* Adjusted for mobile */
+    }
+
+    .contact-info,
+    .contact-form {
+        flex-basis: 100%; /* Full width on mobile */
+    }
+
+    .textb,
+    .textarea {
+        width: 100%; /* Full width for inputs on mobile */
+        margin-bottom: 20px; /* Space between inputs */
+    }
+
+    .btn {
+        width: 100%; /* Full width button */
+    }
+}
+
 
 
