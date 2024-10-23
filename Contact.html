@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, 
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Hanzl Website</title>
     <link rel="stylesheet" href="Contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <style>
@@ -24,7 +22,7 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            padding: 0 20px; /* Adjust padding to your preference */
+            padding: 0 20px;
             height: 50%;
         }
 
@@ -32,77 +30,52 @@
             color: #05c5ff;
             transition: all 0.3s ease;
         }
-
     </style>
     
-      <!-- Navbar Section -->
-      <nav class="navbar">
+    <!-- Navbar Section -->
+    <nav class="navbar">
         <div class="navbar__container">
             <a href="#" id="navbar__logo">Michael Hanzl</a>
-            <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
-            
-            
-            
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+            </ul>
         </div>
     </nav>
+    
     <script src="app.js"></script>
 
     <!-- Hero Section -->
     <div class="main">
         <div class="main__container">
             <div class="main__content">
-                    <h1>Contact Page</h1> 
-                    <P>Leave a message, and I'll respond as soon as possible via email.</P>
-                    
-                    <p>Click to download:  <button class="main__btn"><a href="/Michael_Hanzl_Resume.pdf" download>Resume</a></button><p> 
-                               
-                            
+                <h1>Contact Page</h1>
+                <p>Leave a message, and I'll respond as soon as possible via email.</p>
+                <p>Click to download: <button class="main__btn"><a href="/Michael_Hanzl_Resume.pdf" download>Resume</a></button></p>
             </div>
             <div class="contact-page">
                 <h2>Get in touch</h2>
                 <div class="contact-info">
-                    <div class="item">
-                        <i class="icon fas fa-home"></i>
-                        Dallas, Texas
-                    </div>
+                    <div class="item"><i class="icon fas fa-home"></i> Dallas, Texas</div>
                 </div>
                 <div class="contact-info">
-                    <div class="item">
-                        <i class="icon fas fa-phone"></i>
-                        214-208-9799
-                    </div>
+                    <div class="item"><i class="icon fas fa-phone"></i> 214-208-9799</div>
                 </div>
                 <div class="contact-info">
-                    <div class="item">
-                        <i class="icon fas fa-envelope"></i>
-                        mhanzl99@gmail.com
-                    </div>
+                    <div class="item"><i class="icon fas fa-envelope"></i> mhanzl99@gmail.com</div>
                 </div>
                 <div class="contact-info">
-                    <div class="item">
-                        <i class="icon fas fa-clock"></i>
-                        Mon - Sat 8:00 AM to 6:00 PM
-                    </div>
-                </div>  
+                    <div class="item"><i class="icon fas fa-clock"></i> Mon - Sat 8:00 AM to 6:00 PM</div>
+                </div>
                 <form action="https://formsubmit.co/mhanzl99@gmail.com" method="POST" class="contact-form">
                     <input type="name" class="textb" placeholder="Your Name" name="name" required>
                     <input type="hidden" name="_next" value="http://127.0.0.1:5500/Contact.html">
                     <input type="email" class="textb" placeholder="Your Email Address" name="email" required>
-                    <input type="text" class="textarea" placeholder="Message" name="message" required>
+                    <textarea class="textarea" placeholder="Message" name="message" required></textarea>
                     <input type="submit" class="btn" value='Send'>
-               
                 </form>
-                </div>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br> <br>
-               <br>
-               <br>
-                
-
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
