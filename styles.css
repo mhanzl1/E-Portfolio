@@ -1,0 +1,348 @@
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #030e13;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #0dd2ec 0%, #9d04f5 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* Navbar Links */
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-left: auto;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* Background Settings */
+body {
+    background-color: #000000;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/* Main Section */
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/images/background2.jpg');
+    background-size: cover;
+    padding: 50px;
+   
+}
+
+.main__content h1 {
+    font-size: 4.5rem;
+    background-image: linear-gradient(to top, #b721ff 0%, #00f7ff 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    margin-top: 50px;
+    
+}
+
+.main__content h2 {
+    font-size: 2rem;
+    background-image: linear-gradient(to top, #21d4fd 0%, #b721ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.main__content p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
+    padding: 14px 33px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.35s;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+#main__img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+/* Adding margin to the About Me section */
+#about-me {
+    padding-top: 50px; /* Existing padding */
+    margin-top: 50px; /* Adds space above the section */
+    padding-bottom: 50px;
+}
+
+/* SDLC Section */
+.sdlc__img--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
+#sdlc__img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Services Section */
+.services {
+    background: #030e13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+.services__card {
+    margin: 1rem;
+    height: 450px;
+    width: 350px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic6.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    transition: 0.2s ease-in;  
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+}
+
+.services__card:nth-child(2) {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic7.jpg');
+}
+
+.services__card:nth-child(3) {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic3.jpg');
+}
+
+.services h2 {
+    position: absolute;
+    top: 310px;
+    left: 30px;
+}
+
+.services__card p {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+
+.services__card button {
+    position: absolute;
+    top: 390px;
+    left: 30px;
+    padding: 10px 20px;
+    background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.services__card button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+    .services {
+        height: 900px;
+    }
+    .services__card {
+        height: 220px;
+        width: 390px;
+    }
+    .services h2 {
+        top: 90px;
+    }
+    .services__card p {
+        top: 125px;
+    }
+    .services__card button {
+        top: 160px;
+    }
+
+    .tag-title {
+        font-size: 28px;
+        margin-bottom: 0px; /* Space between the title and the tag cloud */
+        color: white; /* Ensures the title is visible */
+        margin-top: 50px;
+    }
+    .main__btn {
+          margin-bottom: 10%;
+          margin-left: 30%;
+    }
+
+    .main__content h1 {
+        font-size: 3.5rem;
+        background-image: linear-gradient(to top, #b721ff 0%, #00f7ff 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        
+    }
+
+    .main__content p {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 1rem;
+    }
+
+    #navbar__logo {
+        background-color: #ff8177;
+        background-image: linear-gradient(to top, #0dd2ec 0%, #9d04f5 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-top: 20px;
+        
+    } 
+
+    .navbar__item {
+        margin-top: -200;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        grid-template-columns: 1fr;
+        
+    }
+    .main__img--container {
+        justify-content: center;
+        margin-left: 0;
+    }
+    #main__img {
+        width: 300px;
+        height: 300px;
+    }
+    .services__container {
+        margin-bottom: 100px;
+        
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services {
+        height: 1600px;
+    }
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    .main__content p {
+        font-size: 1.5rem;
+    }  
+}
+
+

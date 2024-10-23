@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Hanzl Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: ##030e13;
+            color: #fff; /* Added color for text visibility */
+            font-family: 'Poppins', sans-serif;  
+        }
+
+        .navbar {
+            background: #030e13;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        #navbar__logo {
+            background-color: #ff8177;
+            background-image: linear-gradient(to top, #0dd2ec 0%, #9d04f5 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        .navbar__menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            text-align: right;
+            margin-left: auto; /* Pushes links to the far right */
+        }
+
+        .navbar__item {
+            height: 80px;
+        }
+
+        .navbar__links {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 0 20px; /* Adjust padding to your preference */
+            height: 100%;
+        }
+
+        .navbar__links:hover {
+            color: #05c5ff;
+            transition: all 0.3s ease;
+        }
+
+           /* Flexbox container for About Me and Skills sections */
+           .about-skills-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 60px; /* Added padding for better spacing */
+        }
+
+        .about-section {
+            width: 85%; /* About Me takes 60% of the width */
+            padding: -30px;
+        }
+
+        .skills-section {
+            width: 155%; /* Skills take 35% of the width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 50px;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        h2 {
+            font-size: 22px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 35px;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        h4 {
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 22px;
+           
+    
+        }
+
+        h5 {
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        dl  {
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 22px;
+            font-family: 'Kumbh Sans,', sans-serif,;
+        }
+
+       
+
+        .tag-title {
+            font-size: 28px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            text-align: center;
+        }
+
+        .tagcloud {
+            width: 100%;
+        }
+
+        .tagcloud--item:hover {
+            color: #0196fa;
+        }
+
+        .navbar__toggle {
+            display: none;
+        }
+
+       
+
+        @media (max-width: 768px) {
+            .navbar__container {
+                flex-direction: column;
+            }
+
+            .navbar__menu {
+                flex-direction: column;
+                display: none; /* You can implement this for mobile menu toggle */
+            }
+
+            .navbar__toggle {
+                display: block;
+                cursor: pointer;
+            }
+            .about-skills-container {
+                flex-direction: column; /* Stack sections vertically on smaller screens */
+                align-items: center; /* Center the items */
+                padding: 0 20px; /* Less padding on smaller screens */
+                
+            }
+
+            
+          
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Kumbh Sans', sans-serif;
+            
+          
+        }
+
+        h2 {
+            font-size: 22px;
+            line-height: 1.6;
+            align-items: left;
+        
+        }
+
+        h3 {
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 35px;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        h4 {
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 22px;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        h5 {
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        dl  {
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 22px;
+            font-family: 'Kumbh Sans,', sans-serif,;
+        }
+
+
+        }
+
+
+        body {
+            background-color: #030e13;
+            color: #fff;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        /* Skills Section Styling */
+.skills-section {
+    width: 45%; /* Full width */
+    display: flex;
+    flex-direction: column; /* Stacks the title and tag cloud vertically */
+    align-items: center; /* Centers both the title and tag cloud horizontally */
+    text-align: center; /* Ensures text inside the section is centered */
+}
+
+.tag-title {
+    font-size: 28px;
+    margin-bottom: 0px; /* Space between the title and the tag cloud */
+    color: white; /* Ensures the title is visible */
+    margin-top: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center; /* Centers the tag cloud horizontally */
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#logo" id="navbar__logo">Michael Hanzl</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="#home" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="#about-me" class="navbar__links">About Me</a></li>
+                <li class="navbar__item"><a href="#projects" class="navbar__links">Projects</a></li>
+                <li class="navbar__item"><a href="/Contact.html" class="navbar__links">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div class="main" id="home">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>Hi, it's me, Michael.</h1>
+                <p>Information Technology Graduate from The University of Texas at Dallas.</p>
+                <button class="main__btn"><a href="/Contact.html">Contact Me</a></button>
+            </div>
+            <div class="main__img--container">
+                <img id="main__img" src="images/pro pic.jpeg" alt="A picture of Michael" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services"> 
+        <div class="services__container">
+            <div class="services__card">
+                <h2>About Me</h2>
+                <p>Resume/Skills</p>
+                <button><a href="#about-me">Scroll to</a></button>
+            </div>
+            <div class="services__card">
+                <h2>Projects</h2>
+                <p>Personal/School</p>
+                <button><a href="#projects">Scroll to</a></button> 
+            </div>
+            <div class="services__card">
+                <p>Email/Cell</p>
+                <button><a href="/Contact.html">Enter</a></button> 
+            </div>
+        </div>
+    </div> 
+
+    <!-- About Me and Skills Sections -->
+    <div class="about-skills-container" id="about-me">
+        <div class="about-section">
+            <h3>A little about me,</h3>
+            <br>
+            <h2>&emsp; &emsp; I am a recent graduate from The University of Texas at Dallas, where I earned a degree in Information Technology and Systems. Throughout my academic journey, I gained a strong foundation in modern technologies such as Python, JavaScript, and AWS. My experiences, including internships and self-driven projects, have honed my skills in backend development, cloud computing, and web design. I am particularly passionate about AWS and its potential to solve complex, real-world problems, a passion sparked by my work in facial recognition software and API development.
+
+                I thrive in environments that challenge me to stay at the forefront of technological advancements and believe in the power of continuous learning to meet the evolving demands of the industry. I am excited to contribute to innovative projects that drive meaningful, impactful results, and I’m eager to bring my technical expertise and enthusiasm for cloud-based solutions to new opportunities.</h2>
+        </div>
+        <div class="skills-section">
+            <h2 class="tag-title" id="tag-title">Skills:</h2>
+            <span class="content"></span> <!-- Tag Cloud Container -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script>
+        const myTags = [
+            'JavaScript', 'CSS', 'HTML',
+            'C', 'C++', 'React',
+            'Python', 'Java', 'git',
+            'django', 'Node.js', 'OpenCV',
+            'GCP', 'MySQL', 'jQuery',
+        ];
+
+        var tagCloud = TagCloud('.content', myTags, {
+            radius: 250,
+            maxSpeed: 'medium',
+            initSpeed: 'medium',
+            direction: 135,
+            keep: true
+        });
+
+        // To change the color of text randomly
+        var colors = ['#34A853', '#FBBC05', '#4285F4', '#7FBC00', '#FFBA01', '#01A6F0'];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.querySelector('.content').style.color = randomColor;
+
+        // Change color of the title as well
+        document.getElementById('tag-title').style.color = randomColor;
+    </script>
+    <br>   
+    <h5 id="projects">Professional Experience</h5>
+    <br>
+    <br>
+    <h3>Dune Ventures LLC - Backend Mobile Developer – Internship</h2>
+    <br>
+    <h3>(June 2023 – December 2023)</h3>
+    <br>
+    <h4>&emsp; &emsp; During my time at Dune Ventures LLC, I served as a Backend Mobile Developer Intern, where I played a key role in developing and maintaining APIs, managing documentation, and supporting backend services for their mobile application. This hands-on experience allowed me to sharpen my technical skills, particularly in backend development and API integration, while contributing to the overall functionality and user experience of the app.</h4>
+    <br>
+    <h4>&emsp;&emsp;  One particularly memorable task was building a user verification system using AWS services, where users' licenses were compared to selfies for insurance purposes. Despite having limited prior knowledge of AWS, I invested significant time in research and documentation, creating an AWS architecture diagram and configuring the necessary resources. I utilized API Gateway, Amazon S3, and AWS Lambda to trigger Amazon Rekognition for the machine learning comparison. This project not only fulfilled the security needs of the application but also ignited my passion for AWS, leading me to obtain my Cloud Practitioner certification and pursue further certifications like the Solutions Architect Associate.</h4>
+    <br>
+    <dl>
+        KEY POINTS:
+        <br>
+        <br>
+        <li><b>I architected, maintained, and optimized APIs, ensuring smooth integration between backend and frontend components.</b></li>
+        <br>
+        <li><b>Contributed to the development of backend services, which enhanced the mobile app's user-friendliness and responsiveness.</b></li>
+        <br>
+        <li><b>Developed a verification system using AWS facial recognition technology, significantly improving user security and streamlining the rental process.</b></li>
+        <br>
+        <li><b>I also contributed to the mobile app's UI/UX design, resulting in a visually appealing and user-friendly interface.</b></li>
+    </dl>
+    <br>
+    <br>
+    <h5 id="projects">Projects</h5>
+    <br>
+    <br>
+    <h3>Self Project, Web Design and Development</h2>
+    <br>
+    <h3>(January 2023 – Present)</h3>
+    <br>
+    <h4>&emsp;&emsp;  I embarked on a web design and development project that started as a class assignment and evolved into a personal portfolio. My goal was to create a digital platform to showcase my accomplishments, technical skills, and contact information while simultaneously learning how to code and build a website from scratch. I aimed to design and develop an electronic portfolio using HTML, CSS, and JavaScript, ensuring a user-friendly interface while applying modern web development practices. I also wanted to ensure the website was accessible and reliable, so I used AWS Route 53 for hosting. Additionally, I took on the challenge of optimizing the site for mobile devices and enhancing the UI/UX of a related mobile app.</h4>
+    <br>
+    <h4>&emsp;&emsp;  I built the portfolio using HTML, CSS, and JavaScript to showcase my skills and contact information, focusing on creating a clean and responsive design. Throughout the project, I actively refined the user experience by analyzing potential issues, troubleshooting design flaws, and making necessary adjustments to enhance functionality. To ensure the site was accessible and reliable, I utilized AWS Route 53 for hosting, guaranteeing high availability for visitors. Additionally, I implemented JavaScript automation to boost visitor engagement and interaction. Beyond the website, I contributed to mobile app UI/UX design, ensuring seamless functionality and a user-friendly interface across different devices.</h4>
+    <br>
+    <dl>
+        KEY POINTS:
+        <br>
+        <br>
+        <li><b>Successfully built and launched an online portfolio that effectively showcases my skills and experiences.</b></li>
+        <br>
+        <li><b>Continuously enhanced the website’s functionality, ensuring a smooth user experience while staying updated with modern web development practices.</b></li>
+        <br>
+        <li><b>Utilized AWS services to ensure the website’s availability, reliability, and responsiveness across different devices.</b></li>
+        <br>
+        <li><b>development of a mobile app's UI/UX, resulting in an optimized and user-friendly experience for mobile users.</b></li>
+    </dl>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Group Project, System Analysis and Design</h2>
+    <br>
+    <h3>(January 2022 – May 2022)</h3>
+    <br>
+    <h4>&emsp;&emsp;  In our System Analysis and Design group project, we followed the System Development Life Cycle (SDLC) framework and stopped just before the coding phase. Collaborating with a small agile team of four other students, our objective was to simulate the SDLC process while employing agile methodology.
+        <br>
+        <br>
+        1. Planning
+        Objective: Define the scope and purpose of the project.
+        Activities: We outlined the project's goals, identified stakeholders, gathered requirements, assigned roles and responsibilities, and created a timeline to guide the process.
+        Outcome: This resulted in a clear project roadmap, including timelines and a feasibility study that set the foundation for our project.
+        <br>
+        <br>
+        2. Requirements Analysis
+        Objective: Understand the business needs and define software requirements.
+        Activities: Using object-oriented analysis and design (OOAD) techniques, we engaged with stakeholders to document both functional and non-functional requirements. We created key diagrams, such as use case diagrams to map user interactions and class diagrams to represent object structure.
+        Outcome: This effort culminated in a detailed Requirements Specification Document (RSD) that captured our findings.
+        <br>
+        <br>
+        3. Design
+        Objective: Create a blueprint for the system architecture and user interface.
+        Activities: Our team produced a comprehensive design document that included the database schema, high-level and detailed software architecture, user interface wireframes, and considerations for security. We utilized activity and sequence diagrams to visualize system workflows.
+        Outcome: The design documents prepared us for the implementation (coding) phase, even though we did not proceed to that stage.
+    <br>
+    <br>Results:
+    <br>
+    &emsp;  Overall, I found this group project immensely helpful in gaining practical experience with the SDLC and preparing a project for implementation. Each phase we followed allowed us to systematically develop a clear and actionable plan for the system. This experience provided valuable insights into real-world systems analysis and design principles, enhancing my skills in project management and collaboration within a team setting.</h4>
+    <div class="sdlc__img--container">
+        <img id="sdlc__img" src="images/Screenshot 2024-10-20 at 9.36.48 AM.png" />
+    </div>
+    <dl>
+        KEY POINTS:
+        <br>
+        <br>
+        <li><b>Understanding of the SDLC Framework: Gained a comprehensive understanding of the System Development Life Cycle (SDLC) phases and their importance in developing a structured approach to software projects.</b></li>
+        <br>
+        <li><b>Application of OOAD Techniques: Utilized object-oriented analysis and design (OOAD) methodologies to effectively gather and document system requirements, leading to the creation of essential diagrams such as use case, class, activity, and sequence diagrams.</b></li>
+        <br>
+        <li><b>Collaborative Team Dynamics: Developed essential skills in collaboration and communication within an agile team, learning how to effectively assign roles, delegate tasks, and engage with stakeholders to ensure project alignment.</b></li>
+        <br>
+        <li><b>Preparation for Implementation: Produced detailed design documents that outlined system architecture, user interfaces, and security considerations, providing a solid foundation for moving towards the implementation phase of the project.</b></li>
+    </dl>
+    <br>
+    <br>
+    <script src="app.js"></script>
+</body>
+</html>
