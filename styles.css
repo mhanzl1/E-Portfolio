@@ -254,7 +254,7 @@ body {
 /* Media Queries */
 @media screen and (max-width: 960px) {
     .services {
-        height: 900px;
+        height: 800px;
     }
     .services__card {
         height: 220px;
@@ -354,9 +354,10 @@ body {
     }
 
      #about-me {
-        margin-bottom: 0px; /* Adjust as needed */
-        padding-bottom: 0px; /* Adjust as needed */
-    }
+    padding-top: 140px; /* Existing padding */
+    margin-top: 50px; /* Adds space above the section */
+    padding-bottom: 50px;
+}
 
     .services {
         margin-top: 0px; /* Adjust as needed */
