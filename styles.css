@@ -357,12 +357,6 @@ body {
         margin-top: 0px; /* Adjust as needed */
     }
 }
- .tag-title {
-        font-size: 28px;
-        margin-bottom: 0px; /* Space between the title and the tag cloud */
-        color: white; /* Ensures the title is visible */
-        margin-top: 50px;
-    }
     
 }
 
