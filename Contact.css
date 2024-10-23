@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     height: 80px;
+    z-index: 1;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
@@ -30,10 +31,15 @@
 #navbar__logo {
     background-color: #ff8177;
     background-image: linear-gradient(to top, #00fdf1 0%, #d004f8 100%);
-    background-clip: text;
-    text-fill-color: transparent;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
     font-size: 2rem;
 }
 
@@ -44,16 +50,14 @@
     text-align: center;
 }
 
-.navbar__item {
-    height: 80px;
-}
-
 .navbar__links {
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     padding: 0 1rem;
+    height: 100%;
 }
 
 .navbar__links:hover {
@@ -61,25 +65,65 @@
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
+/* Hero Section CSS */
 .main {
     background-color: #030e13;
 }
 
 .main__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
     margin: auto;
-    padding: 50px;
+    height: auto;
+    background-color: #030e13;
+    background-image: linear-gradient(to bottom, transparent, #030e13), url("/images/background2.jpg");
+    background-size: 1450px 800px;
+    z-index: 1;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1500px;
+    padding: 0 50px;
 }
 
 .main__content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: white;
+    font-size: 4rem;
+    margin: 30px;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #06eff7 0%, #a306b8 100%);
+    padding: 14px 33px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
 }
 
 .contact-page {
@@ -88,71 +132,137 @@
     padding: 50px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-/* Form Styling */
 .contact-info,
 .contact-form {
-    width: 48%;
-    margin-bottom: 20px;
+    flex: 1;
 }
 
 .item {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     font-size: 16px;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
-.textb, .textarea {
-    width: 100%;
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.textb {
+    width: calc(50% - 10px);
+    height: 60px;
     padding: 12px;
     background-color: #222;
     border: none;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .textarea {
+    width: 100%;
+    max-height: 600px;
+    max-width: 400px;
     resize: vertical;
-    height: 150px;
+    padding: 22px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .btn {
     font-size: 1rem;
     background-image: linear-gradient(to top, #06eff7 0%, #a306b8 100%);
-    padding: 12px 24px;
+    padding: 20px 45px;
     border: none;
     border-radius: 4px;
     color: #fff;
+    margin: auto;
     cursor: pointer;
+    position: relative;
+    transition: 0.35s;
+    outline: none;
 }
 
-.btn:hover {
-    background-color: transparent;
-    color: #db3434;
-}
-
-/* Responsive Design */
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
     .main__container {
-        flex-direction: column;
-        padding: 20px;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        padding: 0 20px;
     }
 
-    .contact-info, 
-    .contact-form {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
     .main__content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    .btn {
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .textb {
         width: 100%;
+    }
+
+    .textarea {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Larger screens adjustments */
+@media screen and (min-width: 768px) {
+    .contact-page {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        margin-right: 50px;
+        flex: 1;
+    }
+
+    .contact-form {
+        flex: 1;
+        max-width: 600px;
+    }
+
+    .textb {
+        width: calc(50% - 10px);
+    }
+
+    .textarea {
+        width: 100%;
+    }
+}
+
+/* Styling for even larger screens */
+@media screen and (min-width: 1200px) {
+    .contact-page {
+        max-width: 1200px;
+        padding: 50px;
+    }
+
+    .textb, .textarea {
+        font-size: 18px;
+    }
+
+    .contact-info {
+        font-size: 18px;
     }
 }
 
