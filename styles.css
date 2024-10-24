@@ -316,20 +316,6 @@ body {
     z-index: 2;
 }
 
-.services__card button {
-    position: absolute;
-    top: 170px;
-    left: 30px;
-    padding: 10px 90px;
-    background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    z-index: 3; /* Ensures button remains on top */
-}
-
 .services__card button a {
     color: #fff;
     text-decoration: none;
