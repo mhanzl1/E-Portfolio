@@ -246,7 +246,7 @@ body {
     color: #fff;
     cursor: pointer;
     position: absolute; /* Absolute positioning within the card */
-    bottom: 10px; /* Set to the bottom of the card */
+    bottom: 20px; /* Set to the bottom of the card */
     left: 50%; /* Horizontally centered */
     transform: translateX(-50%); /* Adjust for true centering */
     z-index: 3;
