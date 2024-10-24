@@ -276,7 +276,7 @@ body {
     height: 250px;
     width: 350px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic6.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic6.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -291,11 +291,11 @@ body {
 
 /* Styling for 2nd and 3rd cards */
 .services__card:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic7.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic7.jpg');
 }
 
 .services__card:nth-child(3) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic3.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic3.jpg');
 }
 
 /* Make the whole card clickable */
