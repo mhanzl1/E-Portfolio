@@ -300,6 +300,20 @@ h2 {
     .btn {
         width: 100%; /* Full width button */
     }
+    #navbar__logo {
+        background-color: #ff8177;
+        background-image: linear-gradient(to top, #00fdf1 0%, #d004f8 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
 }
 
 /* Larger screens adjustments */
