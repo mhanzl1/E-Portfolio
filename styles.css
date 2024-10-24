@@ -448,6 +448,11 @@ body {
         margin-top: 0px; /* Adjust as needed */
     }
 }
+
+ .main__btn {
+        margin: 2rem auto; /* Centers the button horizontally */
+        display: block;    /* Ensures centering works */
+    }
     
 }
 
