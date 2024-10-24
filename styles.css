@@ -143,6 +143,10 @@ body {
 .main__btn:hover:after {
     width: 100%;
 }
+.main__btn a {
+    text-decoration: none; /* Remove underlining */
+    color: #fff; /* Set color to white or whatever you prefer */
+}
 
 .main__img--container {
     display: flex;
