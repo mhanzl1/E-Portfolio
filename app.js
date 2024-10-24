@@ -20,10 +20,9 @@ navbarLinks.forEach(link => {
 
 const myTags = [
   'JavaScript', 'CSS', 'HTML',
-  'C', 'C++', 'React',
-  'Python', 'Java', 'git',
-  'django', 'Node.js', 'OpenCV',
-  'GCP', 'MySQL', 'jQuery',
+  'C++', 'SDLC', 'Tableau
+  'Python', 'git',
+  'django', 'MySQL', 'jQuery',
 ];
 
 var tagCloud = TagCloud('.content', myTags,{
