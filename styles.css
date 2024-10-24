@@ -134,13 +134,20 @@ body {
     cursor: pointer;
     outline: none;
     transition: all 0.35s;
-    display: inline-block; /* Inline for proper alignment */
-    margin-left: 0; /* Left align by default */
+    display: inline-block;
+    text-align: left;
 }
 
 .main__btn a {
     text-decoration: none;
     color: #fff;
+}
+
+/* Left-align on larger screens */
+@media screen and (min-width: 769px) {
+    .main__btn {
+        margin-left: 0; /* Left align */
+    }
 }
 
 /* Center button on smaller screens */
@@ -344,13 +351,8 @@ body {
     }
 
     .main__content h1 {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
+       
 
-    .main__content p {
-        font-size: 1.5rem;
-   
 
 
 
