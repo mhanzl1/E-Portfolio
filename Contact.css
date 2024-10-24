@@ -172,16 +172,17 @@
 .contact-page {
     width: 100%;
     max-width: 1400px;
-    padding: 50px;
+    padding: 30px; /* Adjusted padding */
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 h2 {
     width: 100%;
-    margin-bottom: 30px; /* Reduced margin-bottom for less white space */
+    margin-bottom: 20px; /* Reduced margin-bottom for less white space */
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     font-size: 60px;
@@ -211,7 +212,7 @@ h2 {
     background-color: #222;
     border: none;
     color: #fff;
-    margin-bottom: 20px; /* Reduced margin for less white space */
+    margin-bottom: 10px; /* Reduced margin for less white space */
 }
 
 .textarea {
@@ -223,7 +224,7 @@ h2 {
     background-color: #333;
     border: none;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced margin for less white space */
 }
 
 .btn {
@@ -334,6 +335,7 @@ h2 {
         font-size: 18px;
     }
 }
+
 
 
 
