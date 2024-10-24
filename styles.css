@@ -311,7 +311,7 @@ body {
 }
 
 /* Keep the button clickable and styled */
-.services__card h6, .services__card button {
+.services__card h6 {
     position: relative;
     z-index: 2;
 }
