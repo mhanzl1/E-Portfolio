@@ -82,10 +82,12 @@ html, body {
 /* Background Settings */
 body {
     background-color: #000000;
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
 
 /* Main Section */
@@ -97,6 +99,7 @@ body {
     background-image: url('background2.jpg');
     background-size: cover;
     padding: 50px;
+   
 }
 
 .main__content h1 {
@@ -106,6 +109,7 @@ body {
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     margin-top: 50px;
+    
 }
 
 .main__content h2 {
@@ -115,6 +119,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+
 .main__content p {
     font-size: 2rem;
     font-weight: 700;
@@ -122,7 +127,6 @@ body {
     margin-top: 1rem;
 }
 
-/* Main Button - Left-aligned for larger screens */
 .main__btn {
     font-size: 1rem;
     background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
@@ -134,28 +138,14 @@ body {
     cursor: pointer;
     outline: none;
     transition: all 0.35s;
-    display: inline-block;
-    text-align: left;
 }
 
+.main__btn:hover:after {
+    width: 100%;
+}
 .main__btn a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Left-align on larger screens */
-@media screen and (min-width: 769px) {
-    .main__btn {
-        margin-left: 0; /* Left align */
-    }
-}
-
-/* Center button on smaller screens */
-@media screen and (max-width: 768px) {
-    .main__btn {
-        margin: 2rem auto; /* Centers the button horizontally */
-        display: block;    /* Ensures centering works */
-    }
+    text-decoration: none; /* Remove underlining */
+    color: #fff; /* Set color to white or whatever you prefer */
 }
 
 .main__img--container {
@@ -172,10 +162,10 @@ body {
     margin-bottom: 50px;
 }
 
-/* About Me Section */
+/* Adding margin to the About Me section */
 #about-me {
-    padding-top: 10px;
-    margin-top: 50px;
+    padding-top: 10px; /* Existing padding */
+    margin-top: 50px; /* Adds space above the section */
     padding-bottom: 50px;
 }
 
@@ -220,7 +210,7 @@ body {
     background-position: center;
     color: #fff;
     position: relative;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in;  
 }
 
 .services__card:hover {
@@ -235,6 +225,18 @@ body {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('pic6.jpg');
 }
 
+.services h2 {
+    position: absolute;
+    top: 310px;
+    left: 30px;
+}
+
+.services__card p {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+
 .services__card button {
     padding: 10px 20px;
     background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
@@ -243,10 +245,10 @@ body {
     font-size: 1rem;
     color: #fff;
     cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Absolute positioning within the card */
+    bottom: 10px; /* Set to the bottom of the card */
+    left: 50%; /* Horizontally centered */
+    transform: translateX(-50%); /* Adjust for true centering */
     z-index: 3;
 }
 
@@ -255,102 +257,205 @@ body {
     text-decoration: none;
 }
 
-/* Media Queries for smaller screens */
+/* ---Services Section--- */
+.services {
+    background: #030e13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 43vh;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.services__card {
+    margin: 1rem;
+    height: 250px;
+    width: 350px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic7.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    transition: 0.2s ease-in;
+    overflow: hidden;
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+}
+
+/* Styling for 2nd and 3rd cards */
+.services__card:nth-child(2) {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic3.jpg');
+}
+
+.services__card:nth-child(3) {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic6.jpg');
+}
+
+/* Make the whole card clickable */
+.card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Keep the button clickable and styled */
+.services__card h6 {
+    position: relative;
+    z-index: 2;
+}
+
+.services__card button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Media Queries */
 @media screen and (max-width: 960px) {
     .services {
         height: 800px;
     }
-
     .services__card {
         height: 220px;
         width: 300px;
     }
-
     .services h2 {
         top: 90px;
     }
-
     .services__card p {
         top: 125px;
     }
-
     .services__card button {
         top: 160px;
     }
 
     .tag-title {
         font-size: 28px;
-        margin-bottom: 0px;
-        color: white;
+        margin-bottom: 0px; /* Space between the title and the tag cloud */
+        color: white; /* Ensures the title is visible */
         margin-top: 50px;
     }
+    .main__btn {
+          margin-bottom: 10%;
+          margin-left: 30%;
+    }
 
-    .content {
-        zoom: 0.85;
+     .content {
+       zoom: 0.85 
     }
 
     .main__content h1 {
         font-size: 3.5rem;
+        background-image: linear-gradient(to top, #b721ff 0%, #00f7ff 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin-bottom: 1rem;
         margin-top: 0;
+        
     }
 
     .main__content p {
         font-size: 1.5rem;
         font-weight: 700;
+        color: #fff;
+        margin-top: 1rem;
     }
 
     #navbar__logo {
+        background-color: #ff8177;
+        background-image: linear-gradient(to top, #0dd2ec 0%, #9d04f5 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
         margin-top: 20px;
+        
+    } 
+
+    .navbar__item {
+        margin-top: -200;
     }
 }
 
 @media screen and (max-width: 375px) {
     .services__container {
-        margin-bottom: 50px;
+        margin-bottom: 50px; /* Ensure minimal spacing */
     }
 
     .main__container {
-        padding: 20px;
+        padding: 20px; /* Add padding if needed */
     }
 }
 
 @media screen and (max-width: 768px) {
     .main__container {
         grid-template-columns: 1fr;
+        
     }
-
     .main__img--container {
         justify-content: center;
         margin-left: 0;
     }
-
     #main__img {
         width: 300px;
         height: 300px;
     }
-
+    
     .services__container {
         margin-bottom: 100px;
+        
     }
 
-    #about-me {
-        padding-top: 140px;
-        margin-top: 50px;
-        padding-bottom: 50px;
-    }
+     #about-me {
+    padding-top: 140px; /* Existing padding */
+    margin-top: 50px; /* Adds space above the section */
+    padding-bottom: 50px;
+}
 
     .services {
-        margin-top: 0px;
+        margin-top: 0px; /* Adjust as needed */
     }
+}
+
+ .main__btn {
+        margin: 2rem auto; /* Centers the button horizontally */
+        display: block;    /* Ensures centering works */
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
     .services {
         height: 1600px;
     }
-
     .main__content h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    .main__content p {
+        font-size: 1.5rem;
+
+}
        
 
 
