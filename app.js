@@ -33,8 +33,8 @@ radius: 250,
 
 // animation speed
 // slow, normal, fast
-maxSpeed: 'medium',
-initSpeed: 'medium',
+maxSpeed: 'slow',
+initSpeed: 'slow',
 
 // 0 = top
 // 90 = left
