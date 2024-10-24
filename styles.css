@@ -255,6 +255,87 @@ body {
     text-decoration: none;
 }
 
+/* ---Services Section--- */
+.services {
+    background: #030e13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 43vh;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.services__card {
+    margin: 1rem;
+    height: 250px;
+    width: 350px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic6.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    transition: 0.2s ease-in;
+    overflow: hidden;
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+}
+
+/* Styling for 2nd and 3rd cards */
+.services__card:nth-child(2) {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic7.jpg');
+}
+
+.services__card:nth-child(3) {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic3.jpg');
+}
+
+/* Make the whole card clickable */
+.card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Keep the button clickable and styled */
+.services__card h6, .services__card button {
+    position: relative;
+    z-index: 2;
+}
+
+.services__card button {
+    position: absolute;
+    top: 170px;
+    left: 30px;
+    padding: 10px 90px;
+    background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3; /* Ensures button remains on top */
+}
+
+.services__card button a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Media Queries */
 @media screen and (max-width: 960px) {
     .services {
