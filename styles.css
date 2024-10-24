@@ -127,6 +127,7 @@ body {
     margin-top: 1rem;
 }
 
+/* Default styling for larger screens, aligning button to the left */
 .main__btn {
     font-size: 1rem;
     background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
@@ -134,10 +135,12 @@ body {
     border: none;
     border-radius: 4px;
     color: #fff;
-    margin-top: 2rem;
     cursor: pointer;
     outline: none;
     transition: all 0.35s;
+    margin-left: 0; /* Align to the left */
+    margin-top: 20px;
+    display: inline-block; /* Inline for proper alignment */
 }
 
 .main__btn:hover:after {
@@ -349,10 +352,6 @@ body {
         color: white; /* Ensures the title is visible */
         margin-top: 50px;
     }
-    .main__btn {
-          margin-bottom: 10%;
-          margin-left: 30%;
-    }
 
      .content {
        zoom: 0.85 
@@ -435,13 +434,13 @@ body {
     .services {
         margin-top: 0px; /* Adjust as needed */
     }
-}
 
- .main__btn {
+     .main__btn {
         margin: 2rem auto; /* Centers the button horizontally */
         display: block;    /* Ensures centering works */
     }
     
+}
 }
 
 @media screen and (max-width: 480px) {
