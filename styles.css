@@ -127,6 +127,7 @@ body {
     margin-top: 1rem;
 }
 
+/* For larger screens, position the button on the left */
 .main__btn {
     font-size: 1rem;
     background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
@@ -134,10 +135,11 @@ body {
     border: none;
     border-radius: 4px;
     color: #fff;
-    margin-top: 2rem;
     cursor: pointer;
     outline: none;
     transition: all 0.35s;
+    margin-left: 0; /* Aligns to the left by default */
+    display: block; /* Ensures proper layout */
 }
 
 .main__btn:hover:after {
