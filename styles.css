@@ -6,11 +6,14 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100vw; /* Ensure the width doesn't exceed the viewport */
+/* Body and Background Settings */
+body {
+    background-color: #030e13;
+    color: #fff; /* Default text color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Navbar Styling */
@@ -79,27 +82,15 @@ html, body {
     transition: all 0.3s ease;
 }
 
-/* Background Settings */
-body {
-    background-color: #000000;
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-}
-
 /* Main Section */
 .main__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     min-height: 100vh;
-    background-image: url('background2.jpg');
+    background-image: url('images/background2.jpg');
     background-size: cover;
     padding: 50px;
-   
 }
 
 .main__content h1 {
@@ -109,7 +100,6 @@ body {
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     margin-top: 50px;
-    
 }
 
 .main__content h2 {
@@ -119,7 +109,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
 .main__content p {
     font-size: 2rem;
     font-weight: 700;
@@ -127,29 +116,47 @@ body {
     margin-top: 1rem;
 }
 
-/* Default styling for larger screens, aligning button to the left */
 .main__btn {
     font-size: 1rem;
-    background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
+    background-image: linear-gradient(to top, #06eff7 0%, #a306b8 100%);
     padding: 14px 33px;
     border: none;
     border-radius: 4px;
     color: #fff;
+    margin-top: 2rem;
     cursor: pointer;
+    position: relative;
+    transition: 0.35s;
     outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #03b83f;
     transition: all 0.35s;
-    margin-left: 0; /* Align to the left */
-    margin-top: 20px;
-    display: inline-block; /* Inline for proper alignment */
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
 }
 
 .main__btn:hover:after {
     width: 100%;
 }
-.main__btn a {
-    text-decoration: none; /* Remove underlining */
-    color: #fff; /* Set color to white or whatever you prefer */
-}
+
 
 .main__img--container {
     display: flex;
@@ -165,26 +172,13 @@ body {
     margin-bottom: 50px;
 }
 
-/* Adding margin to the About Me section */
-#about-me {
-    padding-top: 10px; /* Existing padding */
-    margin-top: 50px; /* Adds space above the section */
-    padding-bottom: 50px;
-}
-
-/* SDLC Section */
-.sdlc__img--container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 55vh;
-}
-
-#sdlc__img {
+#sdlc, .sdlc__img--container  {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; /* Centers the image */ 
 }
 
 /* Services Section */
@@ -208,12 +202,17 @@ body {
     height: 250px;
     width: 350px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('pic7.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('images/pic7.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
     position: relative;
-    transition: 0.2s ease-in;  
+    transition: 0.2s ease-in; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced within the card */
+    align-items: center; /* Centers content horizontally */
+    padding-bottom: 20px; /* Adds spacing at the bottom */ 
 }
 
 .services__card:hover {
@@ -221,11 +220,11 @@ body {
 }
 
 .services__card:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('pic3.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('images/pic3.jpg');
 }
 
 .services__card:nth-child(3) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('pic6.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('images/pic6.jpg');
 }
 
 .services h2 {
@@ -234,227 +233,301 @@ body {
     left: 30px;
 }
 
+.services__card h6 {
+    color: #fff; /* Set text color to white */
+    text-align: center; /* Center the text */
+    position: absolute;
+    top: 10px; /* Position at the top of the card */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin: 0;
+    padding: 0;
+    z-index: 2; /* Ensure it stays above other content */
+}
+
 .services__card p {
     position: absolute;
     top: 350px;
     left: 30px;
 }
 
-.services__card button {
-    padding: 10px 20px;
-    background-image: linear-gradient(to top, #05cdff 0%, #af01ff 100%);
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    position: absolute; /* Absolute positioning within the card */
-    bottom: 10px; /* Set to the bottom of the card */
-    left: 50%; /* Horizontally centered */
-    transform: translateX(-50%); /* Adjust for true centering */
-    z-index: 3;
+/* About, Skills, and Projects Sections */
+.about-skills-container, .projects-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows sections to wrap on small screens */
+    padding: 0 50px;
+    margin-top: 50px;
+    max-width: 100%;
+    gap: 50px; /* Adds space between the sections */
 }
 
-.services__card button a {
-    color: #fff;
-    text-decoration: none;
+/* About Section */
+.about-section, .skills-section {
+    flex: 1; /* Each section takes up 50% of the width */
+    padding: 20px;
+    background: #1c1c1c;
+    border-radius: 8px;
 }
 
-/* ---Services Section--- */
-.services {
-    background: #030e13;
+.about-section h3 {
+    font-size: 2.5rem;
+    color: #0099ff;
+}
+
+.about-section h2 {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 43vh;
+    padding: 20px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    text-align: center;
 }
 
-.services__container {
+/* Tag Title */
+.tag-title {
+    font-size: 2.5rem;
+    color: #f77062;
+    
+}
+
+/* Tag Cloud Styling */
+.content {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the tag cloud horizontally */
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
-.services__card {
-    margin: 1rem;
-    height: 250px;
-    width: 350px;
-    border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic7.jpg');
-    background-size: cover;
-    background-position: center;
+.tag {
+    background-color: ##1c1c1c;
     color: #fff;
-    position: relative;
-    transition: 0.2s ease-in;
-    overflow: hidden;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.services__card:hover {
-    transform: scale(1.075);
+.tag:hover {
+    background-color: #f77062;
 }
 
-/* Styling for 2nd and 3rd cards */
-.services__card:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic3.jpg');
+/* Projects Section */
+.projects-section {
+    width: 100%; /* Default width for large screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #111;
+    border-radius: 8px;
+    text-align: center;
 }
 
-.services__card:nth-child(3) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/pic6.jpg');
+.projects-section h3 {
+    font-size: 2.5rem;
+    color: #f77062;
 }
 
-/* Make the whole card clickable */
-.card-link {
-    display: block;
+.projects-section .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  
+}
+
+.project-card {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h4 {
+    font-size: 1.8rem;
+    color: #f77062;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #05cdff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    background-color: #af01ff;
+}
+
+/* professional-experience-section */
+.experience_container {
+    padding: 0 50px;
+    margin-top: 50px;
+    max-width: 100%;
+}
+.professional-experience, .project1, .project2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows sections to wrap on small screens */
+    padding: 0 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 100%;
+    gap: 10px; /* Adds space between the sections */
+    width: 100%; /* Default width for large screens */
+    padding: 20px;
+    background: #1c1c1c;
+    border-radius: 8px;
+}
+
+.professional-experience h5, .project1 h5, .project2 h3, .project1 h3, .professional-experience h3 {
+    font-size: 2.5rem;
+    color: #f6f6f6;
+    text-align: center;
     width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
-/* Keep the button clickable and styled */
-.services__card h6 {
-    position: relative;
-    z-index: 2;
+.professional-experience h4, .professional-experience dl, .project1 h4, .project1 dl, .project2 h4, .project2 dl {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
 }
 
-.services__card button a {
-    color: #fff;
-    text-decoration: none;
+.experience_container h5 {
+    font-size: 3.5rem;
+    color: #0099ff;
+    text-align: center;
 }
 
-/* Media Queries */
-@media screen and (max-width: 960px) {
-    .services {
-        height: 800px;
-    }
-    .services__card {
-        height: 220px;
-        width: 300px;
-    }
-    .services h2 {
-        top: 90px;
-    }
-    .services__card p {
-        top: 125px;
-    }
-    .services__card button {
-        top: 160px;
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar__container {
+        flex-direction: column;
     }
 
-    .tag-title {
-        font-size: 28px;
-        margin-bottom: 0px; /* Space between the title and the tag cloud */
-        color: white; /* Ensures the title is visible */
-        margin-top: 50px;
+    .navbar__menu {
+        flex-direction: column;
+        display: none; /* Mobile menu toggle */
     }
 
-     .content {
-       zoom: 0.85 
-    }
-
-    .main__content h1 {
-        font-size: 3.5rem;
-        background-image: linear-gradient(to top, #b721ff 0%, #00f7ff 90%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 1rem;
-        margin-top: 0;
-        
-    }
-
-    .main__content p {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #fff;
-        margin-top: 1rem;
-    }
-
-    #navbar__logo {
-        background-color: #ff8177;
-        background-image: linear-gradient(to top, #0dd2ec 0%, #9d04f5 100%);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-        display: flex;
-        align-items: center;
+    .navbar__toggle {
+        display: block;
         cursor: pointer;
-        text-decoration: none;
-        font-size: 2rem;
-        margin-top: 20px;
-        
+    }
+
+    /* About, Skills, and Projects Sections */
+    .main__container {
+        display: flex;
+        flex-direction: column;  /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        padding: 1px;
+    }
+
+    .main__container p {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .main__content {
+        text-align: center; /* Centers text and elements inside */
+    }
+
+    .main__btn {
+        margin: 0 auto; /* Centers button horizontally */
+    }
+
+    .main__img--container {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Space between button and image */
+    }
+
+    #main__img {
+        width: 350px; /* Reduce image size */
+        height: 350px; /* Maintain aspect ratio */
+        margin-top: 30px;
     } 
 
-    .navbar__item {
-        margin-top: -200;
-    }
-}
-
-@media screen and (max-width: 375px) {
     .services__container {
-        margin-bottom: 50px; /* Ensure minimal spacing */
+        flex-direction: column; /* Stack service cards vertically */
+        align-items: center;
     }
 
-    .main__container {
-        padding: 20px; /* Add padding if needed */
+    .services__card {
+        width: ; /* Reduce the width of the cards on small screens */
+        margin-bottom: 20px; /* Add space between cards */
     }
-}
-
-@media screen and (max-width: 768px) {
-    .main__container {
-        grid-template-columns: 1fr;
-        
-    }
-    .main__img--container {
-        justify-content: center;
-        margin-left: 0;
-    }
-    #main__img {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .services__container {
-        margin-bottom: 100px;
-        
-    }
-
-     #about-me {
-    padding-top: 140px; /* Existing padding */
-    margin-top: 50px; /* Adds space above the section */
-    padding-bottom: 50px;
-}
 
     .services {
-        margin-top: 0px; /* Adjust as needed */
+        height: auto; /* Adjust height to fit the content */
     }
 
-     .main__btn {
-        margin: 2rem auto; /* Centers the button horizontally */
-        display: block;    /* Ensures centering works */
+    .about-skills-container, .projects-container, .experience_container 
+    {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center the items */
+        padding: 0 20px; /* Less padding on smaller screens */
     }
-    
-}
-}
 
-@media screen and (max-width: 480px) {
-    .services {
-        height: 1600px;
+    .about-section, .skills-section, .projects-section {
+        width: 100%; /* Make each section take full width */
     }
-    .main__content h1 {
-        font-size: 2rem;
+
+    .about-section {
+        margin-top: 20px; /* Add some spacing on small screens */
+    }
+
+    .skills-section {
         margin-top: 20px;
     }
-    .main__content p {
-        font-size: 1.5rem;
 
-}
+    .projects-section {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1rem;
+        
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        text-align
+    }
+
        
 
 
