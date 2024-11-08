@@ -306,6 +306,7 @@ body {
     display: flex;
     justify-content: center; /* Centers the tag cloud horizontally */
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .tag {
