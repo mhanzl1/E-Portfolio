@@ -490,6 +490,12 @@ body {
         height: auto; /* Adjust height to fit the content */
     }
 
+     .tag {
+        font-size: 3rem; /* Reduce font size for smaller screens */
+        padding: 5px; /* Adjust padding for smaller tags */
+    }
+
+
     .about-skills-container, .projects-container, .experience_container 
     {
         flex-direction: column; /* Stack sections vertically on smaller screens */
